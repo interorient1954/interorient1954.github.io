@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Interorient Navigation — Shipowners since 1979</title>
+  <meta name="description" content="Interorient Navigation Company Limited, Limassol, Cyprus. Shipowners since 1979: product tankers and bulk carriers, the Interorient Shipping Fund and ship management through InterMaritime Shipmanagement.">
+  <link rel="icon" type="image/svg+xml" href="assets/interorient-emblem.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0A1A2F;
+      --ink-2: #0E2342;
+      --deep: #07111F;
+      --navy: #183868;
+      --gold: #E8A438;
+      --gold-bright: #F2B95C;
+      --gold-ink: #8A5F17;
+      --ivory: #F7F3EA;
+      --paper: #FBF8F2;
+      --sand: #EFE7D7;
+      --text: #17212F;
+      --muted: #5A6472;
+      --line: rgba(10, 26, 47, .14);
+      --line-light: rgba(247, 243, 234, .16);
+      --serif: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+      --sans: "Barlow", "Segoe UI", system-ui, -apple-system, sans-serif;
+      --wordmark: "Times New Roman", Times, "Liberation Serif", serif;
+      --max: 1240px;
+      --gutter: clamp(16px, 4vw, 48px);
+      --section: clamp(5rem, 10vw, 9rem);
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -.01em; margin: 0; }
+    p { margin: 0 0 1rem; }
+    section[id], footer[id] { scroll-margin-top: 72px; }
+    .wrap { width: min(var(--max), 100% - 2 * var(--gutter)); margin-inline: auto; }
+    .nowrap { white-space: nowrap; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--gold); color: var(--ink); padding: .7rem 1rem; text-decoration: none; }
+    .skip:focus { top: 16px; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    .icon { width: 1em; height: 1em; fill: currentColor; flex: none; }
+
+    /* Type helpers */
+    .eyebrow {
+      display: flex; align-items: center; gap: .9rem;
+      margin: 0 0 1.3rem;
+      font: 500 .76rem/1.4 var(--sans);
+      letter-spacing: .24em; text-transform: uppercase;
+      color: var(--gold-ink);
+    }
+    .eyebrow::before { content: ""; width: 2.2rem; height: 1px; background: currentColor; opacity: .85; flex: none; }
+    .on-dark .eyebrow { color: var(--gold); }
+    .h-section { font-size: clamp(2.3rem, 4.4vw, 3.9rem); line-height: 1.06; color: var(--ink); margin-bottom: 1.4rem; }
+    .on-dark .h-section { color: #fff; }
+    .lead { font-size: clamp(1.05rem, 1.25vw, 1.2rem); font-weight: 300; line-height: 1.75; color: var(--muted); }
+    .on-dark .lead { color: rgba(247, 243, 234, .8); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: .7rem;
+      padding: 1rem 1.6rem;
+      font: 500 .76rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase;
+      text-decoration: none; border: 1px solid transparent;
+      transition: background-color .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease);
+    }
+    .btn .icon { width: 1.05em; height: 1.05em; transition: transform .35s var(--ease); }
+    .btn:hover .icon { transform: translate(2px, -2px); }
+    .btn-gold { background: var(--gold); color: var(--ink); }
+    .btn-gold:hover { background: var(--gold-bright); }
+    .btn-line { border-color: rgba(255, 255, 255, .55); color: #fff; }
+    .btn-line:hover { background: rgba(255, 255, 255, .1); border-color: #fff; }
+    .btn-navy { background: var(--ink); color: var(--ivory); }
+    .btn-navy:hover { background: var(--navy); }
+
+    /* Header */
+    .site-header {
+      position: fixed; inset: 0 0 auto; z-index: 50;
+      padding: 22px 0; color: #fff;
+      transition: padding .45s var(--ease), box-shadow .45s var(--ease);
+    }
+    /* The blur lives on a pseudo-element: on the header itself it would trap the fixed mobile menu */
+    .site-header::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: rgba(10, 26, 47, .94);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      opacity: 0; transition: opacity .45s var(--ease);
+    }
+    .site-header.is-solid { padding: 12px 0; box-shadow: 0 1px 0 rgba(232, 164, 56, .28); }
+    .site-header.is-solid::before { opacity: 1; }
+    .header-inner { display: flex; align-items: center; gap: 2rem; }
+    .brand { display: flex; align-items: center; gap: .9rem; margin-right: auto; text-decoration: none; color: #fff; }
+    .brand-emblem { width: 46px; height: 46px; flex: none; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .25)); transition: width .45s var(--ease), height .45s var(--ease); }
+    .is-solid .brand-emblem { width: 40px; height: 40px; }
+    .brand-word { display: block; font: 700 1.36rem/1 var(--wordmark); letter-spacing: .07em; }
+    .brand-sub { display: block; margin-top: .4rem; font: 500 .6rem/1 var(--sans); letter-spacing: .5em; text-transform: uppercase; color: var(--gold); }
+    .nav { display: flex; gap: clamp(1rem, 1.8vw, 1.9rem); }
+    .nav a {
+      position: relative; padding: .45rem 0;
+      font: 500 .74rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase;
+      text-decoration: none; color: rgba(255, 255, 255, .88);
+    }
+    .nav a::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+      background: var(--gold); transform: scaleX(0); transform-origin: left;
+      transition: transform .45s var(--ease);
+    }
+    .nav a:hover, .nav a.is-current { color: #fff; }
+    .nav a:hover::after, .nav a.is-current::after { transform: scaleX(1); }
+    .header-cta { padding: .8rem 1.2rem; }
+    .nav-toggle { display: none; }
+
+    /* Hero */
+    .hero {
+      position: relative; isolation: isolate;
+      min-height: max(640px, 100svh);
+      display: flex; align-items: flex-start;
+      color: #fff; background: var(--ink); overflow: hidden;
+    }
+    .hero-media { position: absolute; inset: 0; z-index: -2; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; transform: scale(1.08); animation: heroSettle 9s var(--ease) forwards; }
+    @keyframes heroSettle { to { transform: scale(1); } }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(7, 17, 31, .6) 0%, rgba(7, 17, 31, 0) 22%),
+        linear-gradient(270deg, rgba(7, 17, 31, .84) 0%, rgba(7, 17, 31, .55) 36%, rgba(7, 17, 31, 0) 64%),
+        linear-gradient(0deg, rgba(7, 17, 31, .62) 0%, rgba(7, 17, 31, 0) 32%);
+    }
+    .hero-inner { display: flex; justify-content: flex-end; padding: clamp(120px, 17vh, 190px) 0 5rem; }
+    .hero-copy { max-width: 560px; text-shadow: 0 2px 28px rgba(7, 17, 31, .45); }
+    .hero h1 { font-size: clamp(3.3rem, 6.4vw, 6.6rem); line-height: .94; margin: 0 0 1.5rem; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero .eyebrow { color: var(--gold); }
+    .hero-lead { font-size: clamp(1.02rem, 1.2vw, 1.16rem); font-weight: 300; line-height: 1.7; color: rgba(255, 255, 255, .86); margin-bottom: 2.2rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; }
+    .scroll-cue {
+      position: absolute; left: 50%; bottom: 1.4rem; transform: translateX(-50%);
+      display: grid; justify-items: center; gap: .6rem;
+      font: 500 .62rem/1 var(--sans); letter-spacing: .32em; text-transform: uppercase;
+      color: rgba(255, 255, 255, .7); text-decoration: none;
+    }
+    .scroll-cue span { width: 1px; height: 46px; background: linear-gradient(var(--gold), transparent); animation: cue 2.4s ease-in-out infinite; transform-origin: top; }
+    @keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+    .hero-load > * { opacity: 0; transform: translateY(22px); animation: rise 1.1s var(--ease) forwards; }
+    .hero-load > *:nth-child(2) { animation-delay: .12s; }
+    .hero-load > *:nth-child(3) { animation-delay: .24s; }
+    .hero-load > *:nth-child(4) { animation-delay: .36s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+
+    /* Key facts */
+    .facts { background: var(--ink); color: var(--ivory); border-top: 1px solid rgba(232, 164, 56, .4); }
+    .facts dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; }
+    .fact { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: .65rem; padding: clamp(1.8rem, 3vw, 2.6rem) clamp(1rem, 2vw, 2rem); border-left: 1px solid var(--line-light); }
+    .fact:first-child { border-left: 0; padding-left: 0; }
+    .fact dd { margin: 0; font: 500 clamp(2.5rem, 4.2vw, 3.8rem)/1 var(--serif); color: #fff; }
+    .fact dd small { font-size: .5em; color: var(--gold); margin-left: .1em; }
+    .fact dt { font: 500 .72rem/1.5 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: rgba(247, 243, 234, .66); }
+
+    /* Group intro */
+    .intro { position: relative; overflow: hidden; padding: var(--section) 0; background: var(--ivory); }
+    .intro-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(3rem, 7vw, 7rem); align-items: start; position: relative; }
+    .statement { font: 500 clamp(1.9rem, 3.1vw, 2.85rem)/1.2 var(--serif); color: var(--ink); margin-bottom: 2rem; }
+    .statement em { color: var(--gold-ink); }
+    .intro-note { color: var(--muted); max-width: 46ch; }
+    .pillars { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    .pillars li { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: .8rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
+    .pillars .num { font: 500 1.1rem/1.6 var(--serif); color: var(--gold-ink); }
+    .pillars h3 { font-size: 1.55rem; line-height: 1.2; color: var(--ink); margin-bottom: .25rem; }
+    .pillars p { margin: 0; color: var(--muted); font-size: .98rem; }
+    .watermark { position: absolute; right: -9vw; top: 50%; width: min(44vw, 640px); aspect-ratio: 1; transform: translateY(-50%); opacity: .045; pointer-events: none; }
+
+    /* Heritage */
+    .heritage { background: var(--ink); color: var(--ivory); padding: var(--section) 0; }
+    .heritage-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(3rem, 7vw, 8rem); }
+    .heritage-aside { position: sticky; top: 108px; align-self: start; }
+    .year-row { display: flex; align-items: center; gap: 1.6rem; margin-bottom: 1.6rem; }
+    .year-mark { font: 500 clamp(4.6rem, 10vw, 9rem)/.85 var(--serif); color: var(--gold); letter-spacing: -.02em; margin: 0; }
+    .seal { width: clamp(96px, 9vw, 132px); flex: none; }
+    .seal-ring { transform-origin: 100px 100px; animation: spin 60s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .heritage-aside h2 { font-size: clamp(1.8rem, 2.7vw, 2.45rem); line-height: 1.2; color: #fff; margin-bottom: 2.4rem; max-width: 22ch; }
+    .heritage-figure { margin: 0; }
+    .framed { position: relative; isolation: isolate; margin: 0 14px 0 0; }
+    .framed img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .framed::after { content: ""; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid rgba(232, 164, 56, .55); z-index: -1; }
+    .timeline { list-style: none; margin: 0; padding: 0 0 0 2.4rem; position: relative; }
+    .timeline::before, .timeline::after { content: ""; position: absolute; left: 0; top: .7rem; width: 1px; }
+    .timeline::before { bottom: .7rem; background: rgba(247, 243, 234, .18); }
+    .timeline::after { height: var(--progress, 0px); background: var(--gold); }
+    .timeline li { position: relative; padding-bottom: clamp(2.4rem, 4vw, 3.4rem); }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before {
+      content: ""; position: absolute; left: calc(-2.4rem - 5px); top: .55rem;
+      width: 11px; height: 11px; border-radius: 50%;
+      background: var(--ink); border: 1px solid var(--gold);
+      transition: background-color .5s var(--ease), box-shadow .5s var(--ease);
+    }
+    .timeline li.is-lit::before { background: var(--gold); box-shadow: 0 0 0 6px rgba(232, 164, 56, .14); }
+    .t-year { display: block; margin-bottom: .35rem; font: 600 1.15rem/1.4 var(--serif); letter-spacing: .08em; color: var(--gold); }
+    .timeline h3 { font-size: clamp(1.55rem, 2.3vw, 2.05rem); line-height: 1.15; color: #fff; margin-bottom: .5rem; }
+    .timeline p { margin: 0; max-width: 54ch; color: rgba(247, 243, 234, .74); }
+
+    /* Shipowning */
+    .owning { background: var(--paper); padding: var(--section) 0; }
+    .section-head { max-width: 780px; margin-bottom: clamp(3rem, 5vw, 4.5rem); }
+    .segments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); }
+    .segment { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); }
+    .segment figure { margin: 0; overflow: hidden; aspect-ratio: 16 / 10; position: relative; }
+    .segment img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease); }
+    .segment:hover img { transform: scale(1.045); }
+    .segment-body { padding: clamp(1.6rem, 3vw, 2.6rem); display: flex; flex-direction: column; flex: 1; }
+    .segment h3 { font-size: clamp(1.65rem, 2.4vw, 2.2rem); line-height: 1.14; color: var(--ink); margin-bottom: .9rem; }
+    .segment p { color: var(--muted); }
+    .specs {
+      list-style: none; display: flex; flex-wrap: wrap; gap: .5rem 1.7rem;
+      margin: auto 0 0; padding: 1.3rem 0 0; border-top: 1px solid var(--line);
+      font: 500 1.17rem/1.4 var(--serif); color: var(--ink);
+    }
+    .specs li { display: flex; align-items: center; gap: .65rem; }
+    .specs li::before { content: ""; width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); }
+    .segment-body > p:last-of-type { margin-bottom: 1.6rem; }
+    .fleet-history {
+      display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: clamp(2rem, 5vw, 5rem);
+      margin-top: clamp(3rem, 5vw, 4.5rem); padding: clamp(2rem, 4vw, 3rem) 0;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .fh-figure { display: flex; align-items: center; gap: 1.4rem; margin: 0; }
+    .fh-num { font: 500 clamp(4.4rem, 8vw, 7rem)/.9 var(--serif); color: var(--gold-ink); letter-spacing: -.01em; }
+    .fh-label { max-width: 12rem; font: 500 .72rem/1.6 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+    .fleet-history .eyebrow { margin-bottom: 1rem; }
+    .fh-types { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.9rem; font: 500 clamp(1.3rem, 2vw, 1.7rem)/1.35 var(--serif); color: var(--ink); }
+    .fh-types li { display: flex; align-items: center; gap: .7rem; }
+    .fh-types li::before { content: ""; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+
+    /* Photo band */
+    .band { position: relative; isolation: isolate; overflow: hidden; min-height: clamp(440px, 76vh, 780px); display: flex; align-items: flex-end; color: #fff; background: var(--ink); }
+    .band img { position: absolute; left: 0; top: -8%; width: 100%; height: 116%; object-fit: cover; z-index: -2; will-change: transform; }
+    .band::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(7, 17, 31, .84) 0%, rgba(7, 17, 31, .35) 45%, rgba(7, 17, 31, .05) 75%); }
+    .band-inner { padding: clamp(3rem, 7vw, 6rem) 0; }
+    .band blockquote { margin: 0; max-width: 26ch; font: 500 clamp(1.9rem, 3.6vw, 3.2rem)/1.18 var(--serif); }
+    .band cite { display: block; margin-top: 1.5rem; font: 500 .74rem/1.6 var(--sans); font-style: normal; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+
+    /* Fund */
+    .fund { background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%); color: var(--ivory); padding: var(--section) 0; }
+    .fund-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(3rem, 6vw, 6.5rem); align-items: center; }
+    .checks { list-style: none; margin: 2rem 0 2.6rem; padding: 0; display: grid; gap: 1.05rem; }
+    .checks li { position: relative; padding-left: 2.1rem; color: rgba(247, 243, 234, .86); }
+    .checks li::before { content: ""; position: absolute; left: 0; top: .78em; width: 1.2rem; height: 1px; background: var(--gold); }
+    .fund-figure { margin: 0; }
+    .fund-figure .framed img { aspect-ratio: 4 / 3; }
+    .fund-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: clamp(4rem, 7vw, 6rem) 0 0; border-top: 1px solid var(--line-light); border-bottom: 1px solid var(--line-light); }
+    .fund-stats > div { display: flex; flex-direction: column-reverse; gap: .5rem; padding: 1.8rem 1.4rem; border-left: 1px solid var(--line-light); }
+    .fund-stats > div:first-child { border-left: 0; padding-left: 0; }
+    .fund-stats dd { margin: 0; font: 500 clamp(2rem, 3.2vw, 2.9rem)/1 var(--serif); color: #fff; }
+    .fund-stats dt { font: 500 .7rem/1.5 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: rgba(247, 243, 234, .62); }
+    .fund-note { margin: 1.6rem 0 0; font-size: .86rem; color: rgba(247, 243, 234, .58); }
+
+    /* Ship management */
+    .management { background: var(--sand); padding: var(--section) 0; }
+    .mgmt-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(3rem, 6vw, 6.5rem); align-items: start; }
+    .mgmt-photo { margin: 0; }
+    .mgmt-photo .framed::after { border-color: rgba(138, 95, 23, .45); }
+    .mgmt-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 60% 50%; }
+    .merger {
+      display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center;
+      margin-bottom: clamp(3.5rem, 6vw, 5rem); padding: clamp(2rem, 4vw, 3.5rem);
+      background: var(--ink); color: var(--ivory); border-top: 2px solid var(--gold);
+    }
+    .merger h3 { font-size: clamp(1.9rem, 3vw, 2.6rem); line-height: 1.12; color: #fff; margin-bottom: 1rem; }
+    .merger p { color: rgba(247, 243, 234, .78); }
+    .merger .btn { margin-top: .8rem; }
+    .merger-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--line-light); }
+    .merger-stats > div { display: flex; flex-direction: column-reverse; gap: .45rem; padding: 1.4rem 1rem 1.4rem 0; border-bottom: 1px solid var(--line-light); }
+    .merger-stats dd { margin: 0; font: 500 clamp(2rem, 3vw, 2.7rem)/1 var(--serif); color: #fff; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+    .merger-stats dt { font: 500 .68rem/1.5 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: rgba(247, 243, 234, .6); }
+    .mgmt-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: clamp(3.5rem, 6vw, 5rem) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .mgmt-stats > div { display: flex; flex-direction: column-reverse; gap: .5rem; padding: 1.8rem 1.4rem; border-left: 1px solid var(--line); }
+    .mgmt-stats > div:first-child { border-left: 0; padding-left: 0; }
+    .mgmt-stats dd { margin: 0; font: 500 clamp(2.2rem, 3.6vw, 3.2rem)/1 var(--serif); color: var(--ink); }
+    .mgmt-stats dt { font: 500 .7rem/1.5 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    .legacy { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.6rem); margin-bottom: clamp(3.5rem, 6vw, 5rem); }
+    .legacy article { background: var(--paper); padding: 1.8rem 1.7rem; border-top: 2px solid var(--gold); }
+    .legacy .est { font: 500 .7rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--gold-ink); }
+    .legacy h3 { font-size: 1.55rem; line-height: 1.2; color: var(--ink); margin: .7rem 0 .6rem; }
+    .legacy p { margin: 0; font-size: .96rem; color: var(--muted); }
+    .services-head { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 1.8rem; }
+    .services-head h3 { font-size: clamp(1.7rem, 2.6vw, 2.3rem); color: var(--ink); }
+    .values { font: 500 .74rem/1.5 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--gold-ink); margin: 0; }
+    .services { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+    .services li { padding: 1.5rem 1.4rem 1.6rem 0; border-bottom: 1px solid var(--line); }
+    .services h4 { margin: 0 0 .35rem; font: 600 1.02rem/1.35 var(--sans); color: var(--ink); }
+    .services p { margin: 0; font-size: .92rem; color: var(--muted); }
+
+    /* Investments */
+    .investments { background: var(--paper); padding: var(--section) 0; }
+    .invest-top { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(3rem, 6vw, 6rem); align-items: end; margin-bottom: clamp(3rem, 5vw, 4.5rem); }
+    .invest-top figure { margin: 0; }
+    .invest-top img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 45%; }
+    .invest-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: clamp(1rem, 2vw, 1.6rem); }
+    .invest-card { display: flex; flex-direction: column; padding: clamp(1.8rem, 3vw, 2.6rem); background: #fff; border: 1px solid var(--line); }
+    .invest-card.is-feature { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+    .invest-card .invest-figure { margin: 0; font: 500 clamp(2.4rem, 3.6vw, 3.3rem)/1 var(--serif); color: var(--ink); }
+    .invest-card.is-feature .invest-figure { color: var(--gold); }
+    .invest-card .invest-sub { margin: .7rem 0 1.6rem; font: 500 .7rem/1.5 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--gold-ink); }
+    .invest-card.is-feature .invest-sub { color: rgba(247, 243, 234, .62); }
+    .invest-card h3 { font-size: 1.6rem; line-height: 1.2; color: var(--ink); margin-bottom: .7rem; }
+    .is-feature h3 { color: #fff; }
+    .invest-card p { color: var(--muted); font-size: .98rem; }
+    .is-feature p { color: rgba(247, 243, 234, .78); }
+    .is-feature .text-link { color: var(--gold); }
+    .is-feature .text-link:hover { color: #fff; }
+    .text-link { margin-top: auto; display: inline-flex; align-items: center; gap: .55rem; font: 500 .72rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; text-decoration: none; color: var(--gold-ink); padding-top: .6rem; }
+    .text-link:hover { color: var(--ink); }
+
+    /* Offices */
+    /* overflow: clip (not hidden) so the globe can stay sticky while the office list scrolls past */
+    .offices { padding: var(--section) 0; background: radial-gradient(ellipse 70% 60% at 78% 30%, #12304f 0%, var(--ink) 62%); color: var(--ivory); overflow: clip; }
+    .offices-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(3rem, 6vw, 6rem); align-items: start; }
+    [data-office] {
+      display: flex; flex-direction: column; gap: .3rem; width: 100%; padding: .85rem 0;
+      background: none; border: 0; color: inherit; font: inherit; text-align: left; cursor: pointer;
+    }
+    [data-office] .city { display: flex; align-items: center; gap: .6rem; font: 500 1.38rem/1.2 var(--serif); color: #fff; transition: color .3s var(--ease); }
+    [data-office] .country { font: 500 .66rem/1.4 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: rgba(247, 243, 234, .55); }
+    [data-office] .city::after { content: ""; width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg) scale(0); transition: transform .35s var(--ease); }
+    [data-office]:hover .city, [data-office][aria-pressed="true"] .city { color: var(--gold); }
+    [data-office][aria-pressed="true"] .city::after { transform: rotate(45deg) scale(1); }
+    .hq-card { margin-top: 2.6rem; padding: clamp(1.6rem, 3vw, 2.2rem); border: 1px solid rgba(232, 164, 56, .45); background: rgba(7, 17, 31, .4); }
+    .hq-card .eyebrow { margin-bottom: .2rem; }
+    .hq-card [data-office] { padding: .3rem 0 0; }
+    .hq-card [data-office] .city { font-size: clamp(2rem, 3.2vw, 2.6rem); }
+    .hq-card address { margin: 1.2rem 0 .8rem; font: 500 1.22rem/1.5 var(--serif); font-style: normal; color: rgba(247, 243, 234, .92); }
+    .hq-card address span { display: block; margin-top: .5rem; font: 400 .9rem/1.6 var(--sans); color: rgba(247, 243, 234, .6); }
+    .hq-note { margin: 0 0 1.3rem; font-size: .92rem; color: rgba(247, 243, 234, .7); }
+    .contact-lines { list-style: none; margin: 0 0 1.7rem; padding: 0; display: grid; gap: .6rem; }
+    .contact-lines a { display: inline-flex; align-items: center; gap: .8rem; text-decoration: none; color: #fff; font-size: 1.02rem; }
+    .contact-lines a:hover { color: var(--gold); }
+    .contact-lines .icon { width: 1.15rem; height: 1.15rem; color: var(--gold); }
+    /* Secondary link under the email, indented to line up with the address text */
+    .contact-alt { margin: -.25rem 0 0 1.95rem; }
+    .contact-lines .contact-alt a { gap: .45rem; font-size: .84rem; color: rgba(247, 243, 234, .7); text-decoration: underline; text-decoration-color: rgba(232, 164, 56, .5); text-underline-offset: 3px; }
+    .contact-lines .contact-alt a:hover { color: var(--gold); }
+    .contact-lines .contact-alt .icon { width: .85rem; height: .85rem; }
+    .office-set { margin-top: 3rem; }
+    .set-title { margin: 0; padding-bottom: .9rem; border-bottom: 1px solid rgba(232, 164, 56, .45); font: 500 clamp(1.5rem, 2.2vw, 1.85rem)/1.2 var(--serif); color: #fff; }
+    /* Single-office groups share a row; groups with several offices span both columns */
+    .office-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.7rem 1.6rem; margin-top: 1.6rem; }
+    .office-group.is-wide { grid-column: 1 / -1; }
+    .office-group:not(.is-wide) ul { grid-template-columns: minmax(0, 1fr); }
+    .office-group h4 { margin: 0 0 .5rem; font: 500 .7rem/1.4 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+    .office-group ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.6rem; border-top: 1px solid var(--line-light); }
+    .office-group li { border-bottom: 1px solid var(--line-light); }
+    .office-static { margin: 0; padding: .95rem 0; font: 500 1.15rem/1.3 var(--serif); color: rgba(247, 243, 234, .85); }
+    .globe-wrap { position: sticky; top: 96px; }
+    .globe { position: relative; width: min(100%, 620px); margin-inline: auto; aspect-ratio: 1; }
+    .globe canvas { display: block; width: 100% !important; height: 100% !important; cursor: grab; touch-action: pan-y; opacity: 0; transition: opacity 1.2s ease; }
+    .globe.is-ready canvas { opacity: 1; }
+    .globe.is-dragging canvas { cursor: grabbing; }
+    .globe:not(.is-ready)::before { content: ""; position: absolute; inset: 9%; border: 1px solid rgba(232, 164, 56, .35); border-radius: 50%; animation: globePulse 1.8s ease-in-out infinite; }
+    @keyframes globePulse { 50% { opacity: .35; } }
+    .globe-label {
+      position: absolute; top: 0; left: 0; padding: .45rem .7rem;
+      border: 1px solid rgba(232, 164, 56, .7); background: rgba(10, 26, 47, .88); color: var(--gold);
+      font: 500 .66rem/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; white-space: nowrap;
+      pointer-events: none; transition: opacity .35s ease; will-change: transform;
+    }
+    .offices.no-globe .offices-grid { grid-template-columns: minmax(0, 1fr); }
+    .offices.no-globe .globe-wrap { display: none; }
+
+    /* Footer */
+    .site-footer { background: var(--deep); color: rgba(247, 243, 234, .8); padding: clamp(4rem, 7vw, 6rem) 0 2rem; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: clamp(2rem, 4vw, 3.5rem); }
+    .footer-brand img { width: min(250px, 100%); margin-bottom: 1.6rem; }
+    .footer-brand p { max-width: 32ch; color: rgba(247, 243, 234, .62); font-size: .95rem; }
+    .site-footer h2 { margin: 0 0 1.3rem; font: 500 .72rem/1.4 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+    .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+    .footer-links a { text-decoration: none; color: rgba(247, 243, 234, .86); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-links .icon { width: .95rem; height: .95rem; margin-left: .45rem; vertical-align: -.1em; opacity: .7; }
+    .site-footer address { font-style: normal; line-height: 1.7; color: rgba(247, 243, 234, .74); margin-bottom: 1rem; }
+    .social { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+    .social a { display: inline-flex; align-items: center; gap: .9rem; text-decoration: none; color: rgba(247, 243, 234, .86); }
+    .social .ring { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid rgba(232, 164, 56, .45); border-radius: 50%; transition: background-color .35s var(--ease), border-color .35s var(--ease); }
+    .social .icon { width: 19px; height: 19px; }
+    .social a:hover .ring { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .social a:hover { color: #fff; }
+    .footer-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: clamp(3rem, 5vw, 4.5rem); padding-top: 1.6rem; border-top: 1px solid var(--line-light); font-size: .82rem; color: rgba(247, 243, 234, .5); }
+    .footer-base a { text-decoration: none; color: rgba(247, 243, 234, .7); }
+    .footer-base a:hover { color: var(--gold); }
+
+    /* Big numbers: lining figures, so 100 never reads as "IOO". Kept after every section's `font`
+       shorthand, which would otherwise reset them. Stat cells also keep their numbers aligned
+       when a label wraps. */
+    .fact dd, .fh-num, .fund-stats dd, .mgmt-stats dd, .merger-stats dd, .invest-card .invest-figure { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+    .fund-stats > div, .mgmt-stats > div, .merger-stats > div { justify-content: flex-end; }
+
+    /* Scroll reveal (only when JS runs) */
+    .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1.1s var(--ease), transform 1.1s var(--ease); }
+    .js .reveal.is-in { opacity: 1; transform: none; }
+    .js .reveal-d1 { transition-delay: .1s; }
+    .js .reveal-d2 { transition-delay: .2s; }
+    .js .reveal-d3 { transition-delay: .3s; }
+
+    /* Responsive */
+    @media (max-width: 1120px) {
+      .nav-toggle {
+        display: inline-grid; place-items: center; width: 44px; height: 44px;
+        background: none; border: 1px solid rgba(255, 255, 255, .45); color: #fff; cursor: pointer;
+      }
+      .nav-toggle .bars, .nav-toggle .bars::before, .nav-toggle .bars::after { display: block; width: 18px; height: 1px; background: currentColor; position: relative; transition: transform .35s var(--ease), background-color .35s; }
+      .nav-toggle .bars::before, .nav-toggle .bars::after { content: ""; position: absolute; left: 0; }
+      .nav-toggle .bars::before { top: -6px; }
+      .nav-toggle .bars::after { top: 6px; }
+      .nav-open .nav-toggle .bars { background: transparent; }
+      .nav-open .nav-toggle .bars::before { transform: translateY(6px) rotate(45deg); }
+      .nav-open .nav-toggle .bars::after { transform: translateY(-6px) rotate(-45deg); }
+      .nav {
+        position: fixed; inset: 0; z-index: -1;
+        flex-direction: column; justify-content: center; gap: 1.4rem;
+        padding: 110px var(--gutter) 3rem; background: var(--ink);
+        opacity: 0; visibility: hidden; transition: opacity .4s var(--ease), visibility .4s;
+      }
+      .nav a { font: 500 clamp(1.9rem, 6vw, 2.6rem)/1.1 var(--serif); letter-spacing: 0; text-transform: none; }
+      .nav-open .nav { opacity: 1; visibility: visible; }
+      .header-cta { display: none; }
+      .intro-grid, .heritage-grid, .fund-grid, .mgmt-grid, .invest-top, .merger, .offices-grid { grid-template-columns: minmax(0, 1fr); }
+      .globe-wrap { position: relative; top: auto; }
+      .heritage-aside { position: static; }
+      .heritage-aside figure, .mgmt-photo { max-width: 640px; }
+      .scroll-cue { display: none; }
+      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .invest-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+      .invest-card.is-feature { grid-column: 1 / -1; }
+      .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .watermark { width: 70vw; right: -30vw; top: 12%; transform: none; }
+    }
+    @media (max-width: 820px) {
+      .hero { align-items: flex-end; }
+      .hero-inner { justify-content: flex-start; padding: 120px 0 3.5rem; }
+      .hero-media img { object-position: 24% 50%; }
+      .hero::before { background: linear-gradient(180deg, rgba(7, 17, 31, .6) 0%, rgba(7, 17, 31, 0) 26%), linear-gradient(0deg, rgba(7, 17, 31, .94) 0%, rgba(7, 17, 31, .72) 42%, rgba(7, 17, 31, 0) 72%); }
+      .scroll-cue { display: none; }
+      .facts dl, .fund-stats, .mgmt-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .fact:nth-child(3), .fund-stats > div:nth-child(3), .mgmt-stats > div:nth-child(3) { border-left: 0; padding-left: 0; }
+      .fact:nth-child(n + 3), .fund-stats > div:nth-child(n + 3), .mgmt-stats > div:nth-child(n + 3) { border-top: 1px solid var(--line-light); }
+      .mgmt-stats > div:nth-child(n + 3) { border-top-color: var(--line); }
+      .segments, .legacy, .invest-grid, .fleet-history { grid-template-columns: minmax(0, 1fr); }
+      .services-head { flex-direction: column; align-items: start; gap: .8rem; }
+    }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .brand-word { font-size: 1.15rem; }
+      .brand-emblem { width: 40px; height: 40px; }
+      .hero h1 { font-size: clamp(2.9rem, 13vw, 3.6rem); }
+      .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
+      .services { grid-template-columns: minmax(0, 1fr); }
+      .footer-top { grid-template-columns: minmax(0, 1fr); }
+      .year-row { gap: 1rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .js .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="io-emblem" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="50" fill="#183868"/>
+        <ellipse cx="50" cy="50" rx="35.6" ry="44.6" fill="#E8A438"/>
+        <g fill="#183868">
+          <path d="M40.5 15.6H59.5V17.4Q54.6 17.4 54 19.8V80.2Q54.6 82.6 59.5 82.6V84.4H40.5V82.6Q45.4 82.6 46 80.2V19.8Q45.4 17.4 40.5 17.4Z"/>
+          <path d="M30 27.2H32.3C40.3 37.6 60 50.2 68 59H70V68.5H68C60 60.5 39.3 49.4 32.3 41H30Z" stroke="#E8A438" stroke-width="2.4" stroke-linejoin="round" paint-order="stroke"/>
+          <path d="M23.5 25.6H32.3V71.2Q32.6 72.6 36.4 72.6V74.4H23.6V72.6Q27.4 72.6 27.7 71.2V28.6Q27.4 27.4 23.5 27.4Z"/>
+          <path d="M64 25.6H76V27.4Q72.6 27.4 72.3 28.8V74.4H67.7V28.8Q67.4 27.4 64 27.4Z"/>
+        </g>
+      </symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+      <symbol id="i-envelope" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol>
+      <symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Interorient Navigation, back to top">
+        <svg class="brand-emblem" aria-hidden="true"><use href="#io-emblem"/></svg>
+        <span>
+          <span class="brand-word">INTERORIENT</span>
+          <span class="brand-sub">Navigation</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="#heritage">Heritage</a>
+        <a href="#shipowning">Shipowning</a>
+        <a href="#fund">Shipping Fund</a>
+        <a href="#management">Ship Management</a>
+        <a href="#investments">Investments</a>
+        <a href="#offices">Offices</a>
+      </nav>
+      <a class="btn btn-line header-cta" href="#contact">Contact</a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="hero-media">
+        <img src="assets/img/panama-transit-sky.jpg" width="1599" height="899" alt="An Interorient bulk carrier transiting the Panama Canal beneath a stormy sky" fetchpriority="high">
+      </div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy hero-load">
+          <p class="eyebrow">Interorient Navigation · Limassol, Cyprus</p>
+          <h1>Shipowners<br><em>since 1979</em></h1>
+          <p class="hero-lead">From product tankers and bulk carriers to containerships, multipurpose and ro-ro vessels: a Limassol fleet that has grown to 100 owned ships, managed within the group.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#shipowning">Explore the fleet <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn-line" href="#heritage">Our heritage</a>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#facts" aria-label="Scroll to key figures">Scroll<span></span></a>
+    </section>
+
+    <section class="facts on-dark" id="facts" aria-label="Key figures">
+      <div class="wrap">
+        <dl>
+          <div class="fact reveal"><dt>Founded in Limassol</dt><dd>1979</dd></div>
+          <div class="fact reveal reveal-d1"><dt>Years as shipowners</dt><dd data-count="47" data-years-since="1979">47</dd></div>
+          <div class="fact reveal reveal-d2"><dt>Owned vessels at the fleet's peak, 2007–08</dt><dd data-count="100">100</dd></div>
+          <div class="fact reveal reveal-d3"><dt>Vessels under group management</dt><dd><span data-count="170">170</span><small>+</small></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="intro" id="group" aria-labelledby="group-title">
+      <svg class="watermark" aria-hidden="true"><use href="#io-emblem"/></svg>
+      <div class="wrap intro-grid">
+        <div class="reveal">
+          <p class="eyebrow">The group</p>
+          <h2 class="statement" id="group-title">Founded in Limassol in 1979, Interorient has grown into a <em>diversified maritime group</em> with ships, capital and people at sea worldwide.</h2>
+          <p class="intro-note">Two generations of the Papadopoulos family have led the company, building on a culture of trust, reliability and long-term partnership.</p>
+        </div>
+        <ol class="pillars reveal reveal-d1">
+          <li><span class="num">01</span><div><h3>Ship owning</h3><p>Tankers and bulk carriers today, and containerships, multipurpose and ro-ro vessels over the years, owned directly, in joint ventures and through our fund.</p></div></li>
+          <li><span class="num">02</span><div><h3>Ship management</h3><p>45 years as Interorient Shipmanagement, and since 2024 part of InterMaritime Shipmanagement.</p></div></li>
+          <li><span class="num">03</span><div><h3>Fund management</h3><p>The Interorient Shipping Fund, an alternative investment fund authorised in Cyprus since 2020.</p></div></li>
+          <li><span class="num">04</span><div><h3>Investments</h3><p>Long-term capital in ships, pools and joint ventures, invested alongside trusted partners and investors.</p></div></li>
+          <li><span class="num">05</span><div><h3>Port operations</h3><p>Port activities that complement the group's shipping interests.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="heritage on-dark" id="heritage" aria-labelledby="heritage-title">
+      <div class="wrap heritage-grid">
+        <div class="heritage-aside reveal">
+          <p class="eyebrow">Heritage</p>
+          <div class="year-row">
+            <p class="year-mark">1979</p>
+            <svg class="seal" viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="seal-path" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+              <circle cx="100" cy="100" r="97" fill="none" stroke="#E8A438" stroke-opacity=".55"/>
+              <circle cx="100" cy="100" r="64" fill="none" stroke="#E8A438" stroke-opacity=".35"/>
+              <g class="seal-ring">
+                <text fill="#E8A438" font-family="Barlow, 'Segoe UI', sans-serif" font-size="12.5" font-weight="500" letter-spacing="3"><textPath href="#seal-path" textLength="496" lengthAdjust="spacing">INTERORIENT · LIMASSOL · CYPRUS · ESTABLISHED 1979 ·</textPath></text>
+              </g>
+              <use href="#io-emblem" x="62" y="62" width="76" height="76"/>
+            </svg>
+          </div>
+          <h2 id="heritage-title">Almost half a century of owning, managing and partnering at sea.</h2>
+          <figure class="heritage-figure">
+            <div class="framed">
+              <img src="assets/img/orient-trail-sunset.jpg" width="1355" height="903" loading="lazy" alt="An Interorient bulk carrier sailing through a fjord at golden hour">
+            </div>
+          </figure>
+        </div>
+        <ol class="timeline" data-timeline>
+          <li class="reveal"><span class="t-year">1979</span><h3>Founded in Limassol</h3><p>Adonis Papadopoulos establishes Interorient as a shipowner in Limassol. Interorient Shipmanagement begins the same year, managing the group's ships and, in time, vessels for third-party owners.</p></li>
+          <li class="reveal"><span class="t-year">2004</span><h3>The second generation</h3><p>Themis Papadopoulos succeeds his father as Chief Executive, leading the group's growth into ship management, pools and funds.</p></li>
+          <li class="reveal"><span class="t-year">2005</span><h3>Norient Product Pool</h3><p>Interorient and Denmark's NORDEN establish the Norient Product Pool, today the NORDEN Tanker Pool, one of the world's largest MR and Handysize product tanker pools.</p></li>
+          <li class="reveal"><span class="t-year">2007 – 2008</span><h3>A fleet of 100 ships</h3><p>Interorient's owned fleet reaches 100 vessels: product tankers and bulk carriers alongside containerships, multipurpose and ro-ro vessels.</p></li>
+          <li class="reveal"><span class="t-year">2019</span><h3>40 years of Interorient Shipmanagement</h3><p>Cyprus's Shipping Deputy Ministry congratulates Interorient Shipmanagement on 40 years in Cyprus. The company manages more than 80 vessels.</p></li>
+          <li class="reveal"><span class="t-year">2020</span><h3>Interorient Shipping Fund</h3><p>The group launches an alternative investment fund authorised by the Cyprus Securities and Exchange Commission, opening shipping investments to a wider circle of investors.</p></li>
+          <li class="reveal"><span class="t-year">2024</span><h3>After 45 years, InterMaritime</h3><p>Interorient Shipmanagement joins Intership Navigation and Donnelly Tanker Management to form InterMaritime Shipmanagement, managing more than 170 vessels from Interorient's Limassol headquarters.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="owning" id="shipowning" aria-labelledby="owning-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Shipowning</p>
+          <h2 class="h-section" id="owning-title">A fleet in the house colours since 1979</h2>
+          <p class="lead">Interorient owns and operates its fleet directly, through joint ventures and through the Interorient Shipping Fund. Today the focus is product tankers and bulk carriers; over the years the fleet has also included containerships, multipurpose and ro-ro vessels. Each ship carries the yellow funnel and the IN monogram, and each is managed within the group to the standards charterers rely on.</p>
+        </header>
+        <div class="segments">
+          <article class="segment reveal">
+            <figure>
+              <img src="assets/img/tanker-funnel.jpg" width="1080" height="675" loading="lazy" alt="A product tanker at sea, the Interorient monogram on its funnel">
+            </figure>
+            <div class="segment-body">
+              <p class="eyebrow">Product tankers</p>
+              <h3>Refined products, carried worldwide</h3>
+              <p>MR and Handysize product tankers trading refined petroleum products across the world's major routes, a segment Interorient has helped shape since co-founding the Norient Product Pool with NORDEN in 2005.</p>
+              <ul class="specs" aria-label="Product tanker fleet profile">
+                <li>MR</li>
+                <li>Handysize</li>
+                <li>Refined petroleum products</li>
+              </ul>
+            </div>
+          </article>
+          <article class="segment reveal reveal-d1">
+            <figure>
+              <img src="assets/img/orient-power-funnel.jpg" width="1440" height="1080" loading="lazy" alt="Bulk carrier Orient Power, the Interorient monogram on its yellow funnel" style="object-position: 50% 30%">
+            </figure>
+            <div class="segment-body">
+              <p class="eyebrow">Dry bulk</p>
+              <h3>Geared bulk carriers for the world's commodities</h3>
+              <p>Supramax and Handysize bulk carriers with their own cranes and grabs, built to load and discharge grain, minerals and industrial cargoes in ports large and small.</p>
+              <ul class="specs" aria-label="Bulk carrier fleet profile">
+                <li>Supramax</li>
+                <li>Handysize</li>
+                <li>Geared</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="fleet-history reveal">
+          <p class="fh-figure"><span class="fh-num" data-count="100">100</span><span class="fh-label">Owned vessels at the fleet's peak, 2007–2008</span></p>
+          <div>
+            <p class="eyebrow">Owned over the years</p>
+            <ul class="fh-types">
+              <li>Product tankers</li>
+              <li>Bulk carriers</li>
+              <li>Containerships</li>
+              <li>Multipurpose vessels</li>
+              <li>Ro-ro vessels</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-label="Worldwide trading">
+      <img src="assets/img/panama-transit-cranes.jpg" width="1599" height="899" loading="lazy" alt="Deck cranes of an Interorient bulk carrier, escorted by a tug through the Panama Canal" data-parallax>
+      <div class="wrap band-inner reveal">
+        <p class="eyebrow" style="color: var(--gold)">Worldwide trading</p>
+        <blockquote>“Over many decades, our businesses have nurtured a culture of trust, reliability, and strong family values.”</blockquote>
+        <cite>Themis Papadopoulos, on the creation of InterMaritime, 2024</cite>
+      </div>
+    </section>
+
+    <section class="fund on-dark" id="fund" aria-labelledby="fund-title">
+      <div class="wrap">
+        <div class="fund-grid">
+          <div class="reveal">
+            <p class="eyebrow">Shipowning · Investment fund</p>
+            <h2 class="h-section" id="fund-title">Interorient Shipping Fund</h2>
+            <p class="lead">A separate company in the Interorient family: an alternative investment fund established in Cyprus in 2020 and authorised by the Cyprus Securities and Exchange Commission. It opens shipping transactions usually reserved for large investment firms, aiming for an annual dividend yield and capital gains from vessel trading and asset appreciation.</p>
+            <ul class="checks">
+              <li>Ring-fenced investment structures, each holding its vessels through a special purpose vehicle.</li>
+              <li>Second-hand tankers and bulk carriers acquired swiftly, drawing on market expertise and a trusted network across the industry.</li>
+              <li>Vessels managed to maximise yield and preserve asset value.</li>
+            </ul>
+            <a class="btn btn-gold" href="https://interorientaif.com/" target="_blank" rel="noopener">Visit interorientaif.com <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          </div>
+          <figure class="fund-figure reveal reveal-d1">
+            <div class="framed">
+              <img src="assets/img/tanker-profile.jpg" width="1080" height="719" loading="lazy" alt="A product tanker at anchor in the Interorient colours">
+            </div>
+          </figure>
+        </div>
+
+        <dl class="fund-stats reveal">
+          <div><dt>Established in Cyprus</dt><dd>2020</dd></div>
+          <div><dt>Authorised and regulated</dt><dd>CySEC</dd></div>
+          <div><dt>Alternative investment fund</dt><dd>AIF</dd></div>
+          <div><dt>Segments: tankers and dry bulk</dt><dd data-count="2">2</dd></div>
+        </dl>
+        <p class="fund-note">The Interorient Shipping Fund is a separate legal entity with its own manager and governance. Details of the Fund and its investments are published on interorientaif.com.</p>
+      </div>
+    </section>
+
+    <section class="management" id="management" aria-labelledby="mgmt-title">
+      <div class="wrap">
+        <div class="mgmt-grid">
+          <div class="mgmt-copy reveal">
+            <p class="eyebrow">Ship management · 1979 – 2024</p>
+            <h2 class="h-section" id="mgmt-title">Interorient Shipmanagement</h2>
+            <p class="lead">For 45 years, from 1979 until the 2024 merger, Interorient Shipmanagement managed the group's own fleet and ships for third-party owners from its head office in Limassol and its technical and crewing offices in Singapore and Manila, earning its place among the leaders in quality ship management.</p>
+            <p>Its teams provided technical, crew and commercial management and newbuilding supervision for crude, product and chemical tankers, bulk carriers of all sizes, container ships and general cargo vessels. Interorient also pioneered commercial management pools in specific segments, keeping its managed ships efficiently employed.</p>
+          </div>
+          <figure class="mgmt-photo reveal reveal-d1">
+            <div class="framed">
+              <img src="assets/img/panama-locks.jpg" width="1599" height="899" loading="lazy" alt="A seafarer at work on the deck of an Interorient bulk carrier in the Panama Canal locks">
+            </div>
+          </figure>
+        </div>
+
+        <dl class="mgmt-stats reveal">
+          <div><dt>Years of ship management, 1979–2024</dt><dd data-count="45">45</dd></div>
+          <div><dt>Vessels under management in 2017</dt><dd><span data-count="100">100</span>+</dd></div>
+          <div><dt>People at sea and ashore in 2017</dt><dd>3,000+</dd></div>
+          <div><dt>Countries with offices over the years</dt><dd data-count="8">8</dd></div>
+        </dl>
+
+        <div class="merger on-dark reveal">
+          <div>
+            <p class="eyebrow">Since November 2024</p>
+            <h3>InterMaritime Shipmanagement</h3>
+            <p>After 45 years, Interorient Shipmanagement joined Intership Navigation and its sister company Donnelly Tanker Management to form InterMaritime Shipmanagement, headquartered in Interorient's building on Franklin Roosevelt Avenue in Limassol. One manager now looks after more than 170 tankers, LPG carriers, bulk carriers, container ships, multipurpose vessels, cement carriers and car carriers.</p>
+            <a class="btn btn-line" href="https://intermaritimeshipmanagement.com/about-us/" target="_blank" rel="noopener">About InterMaritime <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          </div>
+          <dl class="merger-stats">
+            <div><dt>Vessels under management</dt><dd><span data-count="170">170</span>+</dd></div>
+            <div><dt>Years of combined heritage</dt><dd><span data-count="80">80</span>+</dd></div>
+            <div><dt>Legacy companies</dt><dd data-count="3">3</dd></div>
+            <div><dt>Countries of presence</dt><dd data-count="10">10</dd></div>
+          </dl>
+        </div>
+
+        <div class="legacy">
+          <article class="reveal"><p class="est">Est. 1979</p><h3>Interorient Shipmanagement</h3><p>45 years of quality ship management for the group's fleet and third-party owners, and a pioneer of commercial pools, including the Norient Product Pool.</p></article>
+          <article class="reveal reveal-d1"><p class="est">Est. 1988</p><h3>Intership Navigation</h3><p>A Limassol shipowner turned ship manager, with experience running pools and chartering operations.</p></article>
+          <article class="reveal reveal-d2"><p class="est">Est. 1995</p><h3>Donnelly Tanker Management</h3><p>A Limassol tanker manager that formed United Product Tankers in 2004.</p></article>
+        </div>
+
+        <div class="services-head reveal">
+          <h3>Full-scope ship management</h3>
+          <p class="values">Integrity · Care · Agility</p>
+        </div>
+        <ul class="services reveal">
+          <li><h4>Technical management</h4><p>Maintenance, safety and compliance across every vessel type.</p></li>
+          <li><h4>Crew management &amp; training</h4><p>Global seafarer recruitment, training and simulator programmes.</p></li>
+          <li><h4>Commercial management</h4><p>Chartering, pool management and voyage operations.</p></li>
+          <li><h4>Newbuilding &amp; conversions</h4><p>Supervision from initial design through to delivery.</p></li>
+          <li><h4>Decarbonisation advisory</h4><p>Guiding owners through the energy transition.</p></li>
+          <li><h4>Insurance</h4><p>Marine insurance broking and claims handling.</p></li>
+          <li><h4>Procurement</h4><p>Spares, stores and bridge and nautical equipment.</p></li>
+          <li><h4>Accounting, legal &amp; travel</h4><p>Financial, legal, catering and crew travel services.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="investments" id="investments" aria-labelledby="invest-title">
+      <div class="wrap">
+        <div class="invest-top">
+          <div class="reveal">
+            <p class="eyebrow">Investments</p>
+            <h2 class="h-section" id="invest-title">Long-term capital, deployed at sea</h2>
+            <p class="lead">For more than four decades Interorient has invested its own capital alongside partners and investors: in a fleet that reached 100 owned ships, in commercial pools and in joint ventures.</p>
+          </div>
+          <figure class="reveal reveal-d1">
+            <img src="assets/img/orient-power-river.jpg" width="1440" height="1080" loading="lazy" alt="Bulk carrier Orient Power under way on a river, with the Interorient funnel mark">
+          </figure>
+        </div>
+        <div class="invest-grid">
+          <article class="invest-card is-feature reveal">
+            <p class="invest-figure">100 ships</p>
+            <p class="invest-sub">Owned fleet at its peak · 2007–2008</p>
+            <h3>A fleet built with our own capital</h3>
+            <p>Over more than four decades, Interorient has invested in product tankers, bulk carriers, containerships, multipurpose and ro-ro vessels, building an owned fleet that reached 100 ships in 2007–2008.</p>
+            <a class="text-link" href="#shipowning">Shipowning <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          </article>
+          <article class="invest-card reveal reveal-d1">
+            <p class="invest-figure">Since 2020</p>
+            <p class="invest-sub">CySEC-authorised fund</p>
+            <h3>Interorient Shipping Fund</h3>
+            <p>A separate, regulated investment company that gives investors access to tanker and bulk carrier ownership.</p>
+            <a class="text-link" href="#fund">The Fund <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          </article>
+          <article class="invest-card reveal reveal-d2">
+            <p class="invest-figure">Since 2005</p>
+            <p class="invest-sub">Pools &amp; joint ventures</p>
+            <h3>Partnerships that last</h3>
+            <p>From co-founding the Norient Product Pool with NORDEN to joint-venture ownership of tankers and bulk carriers, Interorient invests alongside trusted partners.</p>
+            <a class="text-link" href="#heritage">Our heritage <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="offices on-dark" id="offices" aria-labelledby="offices-title">
+      <div class="wrap offices-grid">
+        <div class="reveal">
+          <p class="eyebrow">Worldwide presence</p>
+          <h2 class="h-section" id="offices-title">Offices around the world</h2>
+          <p class="lead">From its head office in Limassol, Interorient has built a worldwide network as a shipowner and ship manager: offices in eight countries across Europe, Asia and Africa over the years, and today the ship management offices of InterMaritime Shipmanagement across Europe, Asia and North America.</p>
+
+          <div class="hq-card">
+            <p class="eyebrow">Head office · since 1979</p>
+            <button type="button" data-office data-lat="34.68" data-lng="33.04" aria-pressed="true"><span class="city">Limassol</span><span class="country">Cyprus</span></button>
+            <address>
+              Interorient Navigation Company Limited<br>
+              142 Franklin Roosevelt Avenue<br>
+              CY-3011 Limassol, Cyprus
+              <span>P.O. Box 51309, CY-3504 Limassol</span>
+            </address>
+            <p class="hq-note">Today also the headquarters of InterMaritime Shipmanagement.</p>
+            <ul class="contact-lines">
+              <li><a href="tel:+35725840300"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+357 25 840 300</a></li>
+              <li><a href="mailto:Business-Development@interorient.com?subject=Enquiry%20from%20the%20Interorient%20Navigation%20website" title="Write to us in your email app, such as Outlook"><svg class="icon" aria-hidden="true"><use href="#i-envelope"/></svg>Business-Development<wbr>@interorient.com</a></li>
+              <li class="contact-alt"><a href="https://outlook.office.com/mail/deeplink/compose?to=Business-Development%40interorient.com&amp;subject=Enquiry%20from%20the%20Interorient%20Navigation%20website" target="_blank" rel="noopener">Or write to us in Outlook on the web <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+            </ul>
+            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=142+Franklin+Roosevelt+Avenue+Limassol+Cyprus" target="_blank" rel="noopener">Get directions <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          </div>
+
+          <div class="office-set">
+            <h3 class="set-title">Interorient over the years</h3>
+            <div class="office-groups">
+              <div class="office-group is-wide">
+                <h4>Ship management</h4>
+                <ul>
+                  <li><button type="button" data-office data-lat="53.55" data-lng="9.99" aria-pressed="false"><span class="city">Hamburg</span><span class="country">Germany</span></button></li>
+                </ul>
+              </div>
+              <div class="office-group is-wide">
+                <h4>Technical &amp; crewing</h4>
+                <ul>
+                  <li><button type="button" data-office data-lat="1.29" data-lng="103.85" aria-pressed="false"><span class="city">Singapore</span><span class="country">Singapore</span></button></li>
+                  <li><button type="button" data-office data-lat="14.58" data-lng="121.06" aria-pressed="false"><span class="city">Manila</span><span class="country">Philippines</span></button></li>
+                </ul>
+              </div>
+              <div class="office-group is-wide">
+                <h4>Crewing</h4>
+                <ul>
+                  <li><button type="button" data-office data-lat="56.95" data-lng="24.11" aria-pressed="false"><span class="city">Riga</span><span class="country">Latvia · since 2001</span></button></li>
+                  <li><button type="button" data-office data-lat="59.93" data-lng="30.36" aria-pressed="false"><span class="city">St Petersburg</span><span class="country">Russia</span></button></li>
+                  <li><button type="button" data-office data-lat="46.48" data-lng="30.73" aria-pressed="false"><span class="city">Ukraine</span><span class="country">Crewing office</span></button></li>
+                  <li><button type="button" data-office data-lat="31.2" data-lng="29.92" aria-pressed="false"><span class="city">Alexandria</span><span class="country">Egypt</span></button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="office-set">
+            <h3 class="set-title">InterMaritime Shipmanagement today</h3>
+            <div class="office-groups">
+              <div class="office-group is-wide">
+                <h4>Europe</h4>
+                <ul>
+                  <li><button type="button" data-office data-lat="37.94" data-lng="23.65" aria-pressed="false"><span class="city">Piraeus</span><span class="country">Greece</span></button></li>
+                  <li><button type="button" data-office data-lat="53.55" data-lng="9.99" aria-pressed="false"><span class="city">Hamburg</span><span class="country">Germany</span></button></li>
+                  <li><button type="button" data-office data-lat="54.52" data-lng="18.53" aria-pressed="false"><span class="city">Gdynia</span><span class="country">Poland</span></button></li>
+                  <li><button type="button" data-office data-lat="53.43" data-lng="14.55" aria-pressed="false"><span class="city">Szczecin</span><span class="country">Poland</span></button></li>
+                  <li><button type="button" data-office data-lat="56.95" data-lng="24.11" aria-pressed="false"><span class="city">Riga</span><span class="country">Latvia</span></button></li>
+                </ul>
+              </div>
+              <div class="office-group is-wide">
+                <h4>Asia</h4>
+                <ul>
+                  <li><button type="button" data-office data-lat="1.29" data-lng="103.85" aria-pressed="false"><span class="city">Singapore</span><span class="country">Singapore</span></button></li>
+                  <li><button type="button" data-office data-lat="14.58" data-lng="121.06" aria-pressed="false"><span class="city">Manila</span><span class="country">Philippines · crewing &amp; training</span></button></li>
+                </ul>
+              </div>
+              <div class="office-group">
+                <h4>North America</h4>
+                <ul>
+                  <li><button type="button" data-office data-lat="30.22" data-lng="-91" aria-pressed="false"><span class="city">Geismar</span><span class="country">Louisiana, USA</span></button></li>
+                </ul>
+              </div>
+              <div class="office-group">
+                <h4>Representatives</h4>
+                <ul>
+                  <li><p class="office-static">Canada · Japan · Australia</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="globe-wrap reveal reveal-d1">
+          <div class="globe" data-globe aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-top">
+      <div class="footer-brand">
+        <img src="assets/interorient-logo-light.svg" width="560" height="196" alt="Interorient">
+        <p>Interorient Navigation Company Limited. Shipowners in Limassol since 1979.</p>
+      </div>
+      <div>
+        <h2>The group</h2>
+        <ul class="footer-links">
+          <li><a href="https://interorientaif.com/" target="_blank" rel="noopener">Interorient Shipping <span class="nowrap">Fund<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></a></li>
+          <li><a href="https://intermaritimeshipmanagement.com/about-us/" target="_blank" rel="noopener">InterMaritime <span class="nowrap">Shipmanagement<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span></a></li>
+          <li><a href="#heritage">Heritage</a></li>
+          <li><a href="#investments">Investments</a></li>
+          <li><a href="#offices">Offices worldwide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Head office</h2>
+        <address>142 Franklin Roosevelt Avenue<br>CY-3011 Limassol, Cyprus</address>
+        <ul class="footer-links">
+          <li><a href="tel:+35725840300">+357 25 840 300</a></li>
+          <li><a href="mailto:Business-Development@interorient.com?subject=Enquiry%20from%20the%20Interorient%20Navigation%20website" title="Write to us in your email app, such as Outlook">Business-Development<wbr>@interorient.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Follow us</h2>
+        <ul class="social">
+          <li><a href="https://cy.linkedin.com/company/interorient-navigation" target="_blank" rel="noopener"><span class="ring"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></span>LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/interorient_navigation/" target="_blank" rel="noopener"><span class="ring"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>Instagram</a></li>
+          <li><a href="https://www.facebook.com/interorientshipmanagement" target="_blank" rel="noopener"><span class="ring"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></span>Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© <span data-year>2026</span> Interorient Navigation Company Limited. All rights reserved.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Live year values
+      var now = new Date().getFullYear();
+      document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = now; });
+      document.querySelectorAll('[data-years-since]').forEach(function (el) {
+        var years = now - parseInt(el.getAttribute('data-years-since'), 10);
+        el.setAttribute('data-count', years);
+        el.textContent = years;
+      });
+
+      // Header turns solid once the hero is scrolled
+      var header = document.querySelector('[data-header]');
+      function onScrollHeader() { header.classList.toggle('is-solid', window.scrollY > 40); }
+      onScrollHeader();
+      window.addEventListener('scroll', onScrollHeader, { passive: true });
+
+      // Mobile menu
+      var toggle = document.querySelector('.nav-toggle');
+      function setMenu(open) {
+        document.body.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      toggle.addEventListener('click', function () { setMenu(!document.body.classList.contains('nav-open')); });
+      document.querySelectorAll('.nav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+      // Count-up figures
+      function countUp(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        if (reduceMotion || !target) { el.textContent = target; return; }
+        var start = null, duration = 1600;
+        function step(t) {
+          if (start === null) start = t;
+          var p = Math.min((t - start) / duration, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      // Reveal on scroll
+      var counters = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+      if (!('IntersectionObserver' in window) || reduceMotion) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+      } else {
+        counters.forEach(function (el) { el.textContent = '0'; });
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-in');
+            entry.target.querySelectorAll('[data-count]').forEach(countUp);
+            if (entry.target.hasAttribute('data-count')) countUp(entry.target);
+            io.unobserve(entry.target);
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+      }
+
+      // Timeline progress line and lit markers
+      var timeline = document.querySelector('[data-timeline]');
+      var items = timeline.querySelectorAll('li');
+      function onScrollTimeline() {
+        var anchor = window.innerHeight * 0.62;
+        var rect = timeline.getBoundingClientRect();
+        var track = rect.height - 22.4; // the track is inset .7rem top and bottom
+        var p = Math.max(0, Math.min(1, (anchor - rect.top) / rect.height));
+        timeline.style.setProperty('--progress', (p * track).toFixed(1) + 'px');
+        items.forEach(function (li) { li.classList.toggle('is-lit', li.getBoundingClientRect().top < anchor); });
+      }
+
+      // Gentle parallax on the photo band
+      var band = document.querySelector('[data-parallax]');
+      function onScrollBand() {
+        if (reduceMotion || !band) return;
+        var r = band.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        var offset = (r.top + r.height / 2 - window.innerHeight / 2) * -0.08;
+        band.style.transform = 'translate3d(0,' + offset.toFixed(1) + 'px,0)';
+      }
+
+      // Highlight the current section in the menu
+      var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+      var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+      function onScrollNav() {
+        var y = window.innerHeight * 0.35, current = -1;
+        sections.forEach(function (s, i) { if (s && s.getBoundingClientRect().top <= y) current = i; });
+        links.forEach(function (a, i) { a.classList.toggle('is-current', i === current); });
+      }
+
+      // Office globe: lazy-loaded as the offices section nears the viewport. It turns to each
+      // location in turn until someone picks an office from the list. A city that appears in both
+      // lists (Interorient over the years, InterMaritime today) is one marker on the globe, and
+      // selecting it highlights it in both lists.
+      var officeButtons = Array.prototype.slice.call(document.querySelectorAll('[data-office]'));
+      var globeEl = document.querySelector('[data-globe]');
+      var locations = [], locationIndex = {};
+      officeButtons.forEach(function (b) {
+        var key = b.dataset.lat + ',' + b.dataset.lng;
+        if (!(key in locationIndex)) {
+          locationIndex[key] = locations.length;
+          locations.push({ name: b.querySelector('.city').textContent, lat: parseFloat(b.dataset.lat), lng: parseFloat(b.dataset.lng) });
+        }
+        b.dataset.loc = locationIndex[key];
+      });
+      var globeApi = null, cycleTimer = null, activeOffice = 0;
+      function setOffice(index) {
+        activeOffice = index;
+        officeButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(+b.dataset.loc === index)); });
+        if (globeApi) globeApi.focus(index);
+      }
+      function stopCycle() { clearInterval(cycleTimer); cycleTimer = null; }
+      officeButtons.forEach(function (b) {
+        b.addEventListener('click', function () { stopCycle(); setOffice(+b.dataset.loc); });
+      });
+      function supportsWebGL() {
+        try {
+          var c = document.createElement('canvas');
+          return !!(window.WebGLRenderingContext && (c.getContext('webgl') || c.getContext('experimental-webgl')));
+        } catch (e) { return false; }
+      }
+      function globeFailed() { document.querySelector('.offices').classList.add('no-globe'); }
+      if (globeEl && 'IntersectionObserver' in window) {
+        var globeIo = new IntersectionObserver(function (entries) {
+          if (!entries[0].isIntersecting) return;
+          globeIo.disconnect();
+          if (!supportsWebGL()) { globeFailed(); return; }
+          import('./assets/js/office-globe.js').then(function (module) {
+            return module.mountGlobe(globeEl, locations, { reducedMotion: reduceMotion, compact: window.matchMedia('(max-width: 767px)').matches });
+          }).then(function (api) {
+            globeApi = api;
+            api.focus(activeOffice, true);
+            if (!reduceMotion) {
+              cycleTimer = setInterval(function () { setOffice((activeOffice + 1) % locations.length); }, 3400);
+            }
+          }).catch(globeFailed);
+        }, { rootMargin: '300px 0px' });
+        globeIo.observe(globeEl);
+      }
+
+      var ticking = false;
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () { onScrollTimeline(); onScrollBand(); onScrollNav(); ticking = false; });
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-labelledby="title">
+  <title id="title">Interorient Navigation</title>
+  <circle cx="50" cy="50" r="50" fill="#183868"/>
+  <ellipse cx="50" cy="50" rx="35.6" ry="44.6" fill="#E8A438"/>
+  <g fill="#183868">
+    <path d="M40.5 15.6H59.5V17.4Q54.6 17.4 54 19.8V80.2Q54.6 82.6 59.5 82.6V84.4H40.5V82.6Q45.4 82.6 46 80.2V19.8Q45.4 17.4 40.5 17.4Z"/>
+    <path d="M30 27.2H32.3C40.3 37.6 60 50.2 68 59H70V68.5H68C60 60.5 39.3 49.4 32.3 41H30Z" stroke="#E8A438" stroke-width="2.4" stroke-linejoin="round" paint-order="stroke"/>
+    <path d="M23.5 25.6H32.3V71.2Q32.6 72.6 36.4 72.6V74.4H23.6V72.6Q27.4 72.6 27.7 71.2V28.6Q27.4 27.4 23.5 27.4Z"/>
+    <path d="M64 25.6H76V27.4Q72.6 27.4 72.3 28.8V74.4H67.7V28.8Q67.4 27.4 64 27.4Z"/>
+  </g>
+</svg>
