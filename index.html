@@ -241,13 +241,9 @@
     .specs li::before { content: ""; width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); }
     .segment-body > p:last-of-type { margin-bottom: 1.6rem; }
     .fleet-history {
-      display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: clamp(2rem, 5vw, 5rem);
       margin-top: clamp(3rem, 5vw, 4.5rem); padding: clamp(2rem, 4vw, 3rem) 0;
       border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
     }
-    .fh-figure { display: flex; align-items: center; gap: 1.4rem; margin: 0; }
-    .fh-num { font: 500 clamp(4.4rem, 8vw, 7rem)/.9 var(--serif); color: var(--gold-ink); letter-spacing: -.01em; }
-    .fh-label { max-width: 12rem; font: 500 .72rem/1.6 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
     .fleet-history .eyebrow { margin-bottom: 1rem; }
     .fh-types { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.9rem; font: 500 clamp(1.3rem, 2vw, 1.7rem)/1.35 var(--serif); color: var(--ink); }
     .fh-types li { display: flex; align-items: center; gap: .7rem; }
@@ -412,7 +408,7 @@
     /* Big numbers: lining figures, so 100 never reads as "IOO". Kept after every section's `font`
        shorthand, which would otherwise reset them. Stat cells also keep their numbers aligned
        when a label wraps. */
-    .fact dd, .fh-num, .fund-stats dd, .mgmt-stats dd, .merger-stats dd, .invest-card .invest-figure { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+    .fact dd, .fund-stats dd, .mgmt-stats dd, .merger-stats dd, .invest-card .invest-figure { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
     .fund-stats > div, .mgmt-stats > div, .merger-stats > div { justify-content: flex-end; }
 
     /* Scroll reveal (only when JS runs) */
@@ -465,7 +461,7 @@
       .fact:nth-child(3), .fund-stats > div:nth-child(3), .mgmt-stats > div:nth-child(3) { border-left: 0; padding-left: 0; }
       .fact:nth-child(n + 3), .fund-stats > div:nth-child(n + 3), .mgmt-stats > div:nth-child(n + 3) { border-top: 1px solid var(--line-light); }
       .mgmt-stats > div:nth-child(n + 3) { border-top-color: var(--line); }
-      .segments, .legacy, .invest-grid, .fleet-history { grid-template-columns: minmax(0, 1fr); }
+      .segments, .legacy, .invest-grid { grid-template-columns: minmax(0, 1fr); }
       .services-head { flex-direction: column; align-items: start; gap: .8rem; }
     }
     @media (max-width: 560px) {
@@ -542,7 +538,7 @@
         <div class="hero-copy hero-load">
           <p class="eyebrow">Interorient Navigation · Limassol, Cyprus</p>
           <h1>Shipowners<br><em>since 1979</em></h1>
-          <p class="hero-lead">From product tankers and bulk carriers to containerships, multipurpose and ro-ro vessels: a Limassol fleet that has grown to 100 owned ships, managed within the group.</p>
+          <p class="hero-lead">From product tankers and bulk carriers to containerships, multipurpose and ro-ro vessels: a fleet owned from Limassol and managed within the group.</p>
           <div class="hero-actions">
             <a class="btn btn-gold" href="#shipowning">Explore the fleet <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
             <a class="btn btn-line" href="#heritage">Our heritage</a>
@@ -557,7 +553,7 @@
         <dl>
           <div class="fact reveal"><dt>Founded in Limassol</dt><dd>1979</dd></div>
           <div class="fact reveal reveal-d1"><dt>Years as shipowners</dt><dd data-count="47" data-years-since="1979">47</dd></div>
-          <div class="fact reveal reveal-d2"><dt>Owned vessels at the fleet's peak, 2007–08</dt><dd data-count="100">100</dd></div>
+          <div class="fact reveal reveal-d2"><dt>Countries with offices over the years</dt><dd data-count="8">8</dd></div>
           <div class="fact reveal reveal-d3"><dt>Vessels under group management</dt><dd><span data-count="170">170</span><small>+</small></dd></div>
         </dl>
       </div>
@@ -608,7 +604,6 @@
           <li class="reveal"><span class="t-year">1979</span><h3>Founded in Limassol</h3><p>Adonis Papadopoulos establishes Interorient as a shipowner in Limassol. Interorient Shipmanagement begins the same year, managing the group's ships and, in time, vessels for third-party owners.</p></li>
           <li class="reveal"><span class="t-year">2004</span><h3>The second generation</h3><p>Themis Papadopoulos succeeds his father as Chief Executive, leading the group's growth into ship management, pools and funds.</p></li>
           <li class="reveal"><span class="t-year">2005</span><h3>Norient Product Pool</h3><p>Interorient and Denmark's NORDEN establish the Norient Product Pool, today the NORDEN Tanker Pool, one of the world's largest MR and Handysize product tanker pools.</p></li>
-          <li class="reveal"><span class="t-year">2007 – 2008</span><h3>A fleet of 100 ships</h3><p>Interorient's owned fleet reaches 100 vessels: product tankers and bulk carriers alongside containerships, multipurpose and ro-ro vessels.</p></li>
           <li class="reveal"><span class="t-year">2019</span><h3>40 years of Interorient Shipmanagement</h3><p>Cyprus's Shipping Deputy Ministry congratulates Interorient Shipmanagement on 40 years in Cyprus. The company manages more than 80 vessels.</p></li>
           <li class="reveal"><span class="t-year">2020</span><h3>Interorient Shipping Fund</h3><p>The group launches an alternative investment fund authorised by the Cyprus Securities and Exchange Commission, opening shipping investments to a wider circle of investors.</p></li>
           <li class="reveal"><span class="t-year">2024</span><h3>After 45 years, InterMaritime</h3><p>Interorient Shipmanagement joins Intership Navigation and Donnelly Tanker Management to form InterMaritime Shipmanagement, managing more than 170 vessels from Interorient's Limassol headquarters.</p></li>
@@ -657,17 +652,14 @@
         </div>
 
         <div class="fleet-history reveal">
-          <p class="fh-figure"><span class="fh-num" data-count="100">100</span><span class="fh-label">Owned vessels at the fleet's peak, 2007–2008</span></p>
-          <div>
-            <p class="eyebrow">Owned over the years</p>
-            <ul class="fh-types">
-              <li>Product tankers</li>
-              <li>Bulk carriers</li>
-              <li>Containerships</li>
-              <li>Multipurpose vessels</li>
-              <li>Ro-ro vessels</li>
-            </ul>
-          </div>
+          <p class="eyebrow">Owned over the years</p>
+          <ul class="fh-types">
+            <li>Product tankers</li>
+            <li>Bulk carriers</li>
+            <li>Containerships</li>
+            <li>Multipurpose vessels</li>
+            <li>Ro-ro vessels</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -690,7 +682,7 @@
             <p class="lead">A separate company in the Interorient family: an alternative investment fund established in Cyprus in 2020 and authorised by the Cyprus Securities and Exchange Commission. It opens shipping transactions usually reserved for large investment firms, aiming for an annual dividend yield and capital gains from vessel trading and asset appreciation.</p>
             <ul class="checks">
               <li>Ring-fenced investment structures, each holding its vessels through a special purpose vehicle.</li>
-              <li>Second-hand tankers and bulk carriers acquired swiftly, drawing on market expertise and a trusted network across the industry.</li>
+              <li>Second-hand tankers, dry bulk and multipurpose vessels acquired swiftly, drawing on market expertise and a trusted network across the industry.</li>
               <li>Vessels managed to maximise yield and preserve asset value.</li>
             </ul>
             <a class="btn btn-gold" href="https://interorientaif.com/" target="_blank" rel="noopener">Visit interorientaif.com <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -706,7 +698,7 @@
           <div><dt>Established in Cyprus</dt><dd>2020</dd></div>
           <div><dt>Authorised and regulated</dt><dd>CySEC</dd></div>
           <div><dt>Alternative investment fund</dt><dd>AIF</dd></div>
-          <div><dt>Segments: tankers and dry bulk</dt><dd data-count="2">2</dd></div>
+          <div><dt>In tankers, dry bulk and multipurpose vessels</dt><dd>Investments</dd></div>
         </dl>
         <p class="fund-note">The Interorient Shipping Fund is a separate legal entity with its own manager and governance. Details of the Fund and its investments are published on interorientaif.com.</p>
       </div>
@@ -779,7 +771,7 @@
           <div class="reveal">
             <p class="eyebrow">Investments</p>
             <h2 class="h-section" id="invest-title">Long-term capital, deployed at sea</h2>
-            <p class="lead">For more than four decades Interorient has invested its own capital alongside partners and investors: in a fleet that reached 100 owned ships, in commercial pools and in joint ventures.</p>
+            <p class="lead">For more than four decades Interorient has invested its own capital alongside partners and investors: in its own fleet, in commercial pools and in joint ventures.</p>
           </div>
           <figure class="reveal reveal-d1">
             <img src="assets/img/orient-power-river.jpg" width="1440" height="1080" loading="lazy" alt="Bulk carrier Orient Power under way on a river, with the Interorient funnel mark">
@@ -787,17 +779,17 @@
         </div>
         <div class="invest-grid">
           <article class="invest-card is-feature reveal">
-            <p class="invest-figure">100 ships</p>
-            <p class="invest-sub">Owned fleet at its peak · 2007–2008</p>
+            <p class="invest-figure">Since 1979</p>
+            <p class="invest-sub">Owned fleet</p>
             <h3>A fleet built with our own capital</h3>
-            <p>Over more than four decades, Interorient has invested in product tankers, bulk carriers, containerships, multipurpose and ro-ro vessels, building an owned fleet that reached 100 ships in 2007–2008.</p>
+            <p>Over more than four decades, Interorient has invested its own capital in product tankers, bulk carriers, containerships, multipurpose and ro-ro vessels, owned directly and through joint ventures.</p>
             <a class="text-link" href="#shipowning">Shipowning <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
           </article>
           <article class="invest-card reveal reveal-d1">
             <p class="invest-figure">Since 2020</p>
             <p class="invest-sub">CySEC-authorised fund</p>
             <h3>Interorient Shipping Fund</h3>
-            <p>A separate, regulated investment company that gives investors access to tanker and bulk carrier ownership.</p>
+            <p>A separate, regulated investment company that gives investors access to investments in tankers, dry bulk and multipurpose vessels.</p>
             <a class="text-link" href="#fund">The Fund <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
           </article>
           <article class="invest-card reveal reveal-d2">
